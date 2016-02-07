@@ -15,7 +15,7 @@ $(document).ready(function() {
   
     $('#calendar THEAD').append(
     $('<tr>').append(
-      $('<th>').text(year + '/' + month + '/' + date).attr('colspan', 7)
+      $('<th>').text(year + '/' + month ).attr('colspan', 7)
     )
   );
   
