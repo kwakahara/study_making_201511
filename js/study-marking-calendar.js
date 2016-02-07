@@ -33,16 +33,9 @@ $(document).ready(function() {
   );
 
   
-  var nowDate = new Date();
-  var nowYear = nowDate.getFullYear();
-  var nowMonth = nowDate.getMonth() + 1;
-  var nowDay = nowDate.getDate();
-  
-  // 翌月の1日目のデータを取得
-  var nextMonth = new Date(nowDate.getFullYear(),nowDate.getMonth()+1 , 1);
-  // その1日前から、当月の最終日を求める
-  nextMonth.setDate(nextMonth.getDate() - 1);
-  var maxDay = nextMonth.getDate();
+  // 当月の月末日
+  var lastDay = new Date(nObj.getFullYear(), nObj.getMonth() + 1, 0);
+  var maxDay = lastDay.getDate();
   var firstDay = new Date(year, month-1, 1);	// 当月の一日
   var day = firstDay.getDay();					// 一日の曜日
   
