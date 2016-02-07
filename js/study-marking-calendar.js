@@ -3,7 +3,8 @@ var nObj = new Date();
 var year = nObj.getFullYear();			// 年
 var month = nObj.getMonth() + 1;			// 月
 var date = nObj.getDate();				// 日
-
+// 曜日 (日本語)
+var weekDays = ["日","月","火","水","木","金","土"] ;
 
 $(document).ready(function() {
 
@@ -372,7 +373,8 @@ $(function(){
   $("td").on('click', function() {
     var innerText = $(this).text();
     if(innerText != ''){
-      alert(year + '/' + month + '/' + innerText + 'がクリックされました');
+      var weekDay = weekDays[innerText % 7] ;
+      alert(year + '/' + month + '/' + innerText +'('+ weekDay +')がクリックされました');
     }
   });
 });
