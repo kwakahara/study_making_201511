@@ -99,4 +99,3 @@ $(function() {
 $(function() {
 	$("#"+date).css('background-color', 'yellow');
 });
-
