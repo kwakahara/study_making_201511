@@ -57,8 +57,10 @@ $(document).ready(function() {
           )
         );
       } else {
-        lastWeek(maxDay-((i-1)*7+7) ,maxDay);
-        break;
+        if (i*7 != maxDay) {
+          lastWeek(maxDay-((i-1)*7+7) ,maxDay);
+          break;
+        }
       }
     }
   } else if(day == 1) {
@@ -89,8 +91,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+6) ,maxDay);
-      break;
+      if (i*7-1 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+6) ,maxDay);
+        break;
+      }
     }
     }
   } else if(day == 2) {
@@ -121,8 +125,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+5) ,maxDay);
-      break;
+      if (i*7-2 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+5) ,maxDay);
+        break;
+      }
     }
     }
     
@@ -154,8 +160,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+4) ,maxDay);
-      break;
+      if (i*7-3 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+4) ,maxDay);
+        break;
+      }
     }
     }
   } else if(day == 4) {
@@ -186,8 +194,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+3) ,maxDay);
-      break;
+      if (i*7-4 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+3) ,maxDay);
+        break;
+      }
     }
     }
   } else if(day == 5) {
@@ -218,8 +228,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+2) ,maxDay);
-      break;
+      if (i*7-5 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+2) ,maxDay);
+        break;
+      }
     }
     }
   } else if(day == 6) {
@@ -250,8 +262,10 @@ $(document).ready(function() {
         )
       );
     } else {
-      lastWeek(maxDay-((i-1)*7+1) ,maxDay);
-      break;
+      if (i*7-6 != maxDay) {
+        lastWeek(maxDay-((i-1)*7+1) ,maxDay);
+        break;
+      }
     }
     }
   }
